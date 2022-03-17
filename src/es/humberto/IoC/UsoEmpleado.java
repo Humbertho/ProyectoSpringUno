@@ -29,11 +29,36 @@ public class UsoEmpleado {
 		System.out.println(Juan.getInforme());*/
 		
 		//Segunda parte de inyeccion de dependencias
-		Empleados Maria = context.getBean("miSecretarioEmpleado", Empleados.class);
+		/*Empleados Maria = context.getBean("miSecretarioEmpleado", Empleados.class);
 		
 		System.out.println(Maria.getTareas());
 		
 		System.out.println(Maria.getInforme());
+		
+		context.close();*/
+		
+		//Tercera parte de inyeccion de dependencias
+		/*SecretarioEmpleado Maria = context.getBean("miSecretarioEmpleado", SecretarioEmpleado.class);
+		
+		System.out.println(Maria.getTareas());
+		
+		System.out.println(Maria.getInforme());
+		
+		System.out.println("Email: " + Maria.getEmail());
+		
+		System.out.println("Empresa: " + Maria.getNombreEmpresa());
+		
+		context.close();*/
+		
+		DirectorEmpleado Pancho = context.getBean("miEmpleado", DirectorEmpleado.class);
+		
+		System.out.println(Pancho.getTareas());
+		
+		System.out.println(Pancho.getInforme());
+		
+		System.out.println("Email: " + Pancho.getEmail());
+		
+		System.out.println("Empresa: " + Pancho.getNombreEmpresa());
 		
 		context.close();
 	}

@@ -4,6 +4,24 @@ public class DirectorEmpleado implements Empleados {
 	
 	//Creacion de campo de tipo creacionInforme (interfaz)
 	private CreacionInformes informeNuevo;
+	private String email;
+	private String nombreEmpresa;
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
 	
 	//creacion de constructor que inyecta la dependencia
 	public DirectorEmpleado(CreacionInformes informenuevo)

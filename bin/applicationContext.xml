@@ -14,12 +14,16 @@
 <!--<bean id="miEmpleado" class="es.humberto.IoC.DirectorEmpleado">
     <constructor-arg ref="miInforme"></constructor-arg>
 </bean>-->
-<bean id="miEmpleado" class="es.humberto.IoC.JefeEmpleado">
+<bean id="miEmpleado" class="es.humberto.IoC.DirectorEmpleado">
     <constructor-arg ref="miInforme"></constructor-arg>
+    <property name="email" value="equipo_director@gmail.com"></property>
+    <property name="nombreEmpresa" value="SoF-HU"></property>
 </bean>
 
 <bean id="miSecretarioEmpleado" class="es.humberto.IoC.SecretarioEmpleado">
     <property name="informeNuevo" ref="miInforme"></property>
+    <property name="email" value="secretaria@gmail.com"></property>
+    <property name="nombreEmpresa" value="SoF-HU"></property>
 </bean>
 
 </beans>
