@@ -18,15 +18,22 @@ public class UsoEmpleado {
 		System.out.println(Empleado2.getTareas());
 		System.out.println(Empleado3.getTareas());*/
 		
-		//Segundo parte de inyeccion de dependencias
+		//Inyeccion de dependencias
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml"); 
 		
-		Empleados Juan = context.getBean("miEmpleado", Empleados.class);
+		/*Empleados Juan = context.getBean("miEmpleado", Empleados.class);
 		
 		System.out.println(Juan.getTareas());
 		
-		System.out.println(Juan.getInforme());
+		System.out.println(Juan.getInforme());*/
+		
+		//Segunda parte de inyeccion de dependencias
+		Empleados Maria = context.getBean("miSecretarioEmpleado", Empleados.class);
+		
+		System.out.println(Maria.getTareas());
+		
+		System.out.println(Maria.getInforme());
 		
 		context.close();
 	}

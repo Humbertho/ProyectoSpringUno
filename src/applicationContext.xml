@@ -18,4 +18,8 @@
     <constructor-arg ref="miInforme"></constructor-arg>
 </bean>
 
+<bean id="miSecretarioEmpleado" class="es.humberto.IoC.SecretarioEmpleado">
+    <property name="informeNuevo" ref="miInforme"></property>
+</bean>
+
 </beans>
